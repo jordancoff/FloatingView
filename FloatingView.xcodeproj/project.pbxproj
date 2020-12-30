@@ -14,6 +14,7 @@
 		42709BEC259665C2000B876A /* FloatingViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42709BEB259665C2000B876A /* FloatingViewManager.swift */; };
 		42901559259CEBCD00AEAE15 /* FloatingViewCustomizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42901558259CEBCD00AEAE15 /* FloatingViewCustomizing.swift */; };
 		4290155B259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290155A259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift */; };
+		4290155F259D198E00AEAE15 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4290155E259D198E00AEAE15 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		42709BEB259665C2000B876A /* FloatingViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewManager.swift; sourceTree = "<group>"; };
 		42901558259CEBCD00AEAE15 /* FloatingViewCustomizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewCustomizing.swift; sourceTree = "<group>"; };
 		4290155A259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+FloatingViewManager.swift"; sourceTree = "<group>"; };
+		4290155E259D198E00AEAE15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		42709BD425955DC2000B876A /* FloatingView */ = {
 			isa = PBXGroup;
 			children = (
+				4290155E259D198E00AEAE15 /* README.md */,
 				4290155D259D07AC00AEAE15 /* Example */,
 				42709BEB259665C2000B876A /* FloatingViewManager.swift */,
 				42901558259CEBCD00AEAE15 /* FloatingViewCustomizing.swift */,
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4290155F259D198E00AEAE15 /* README.md in Resources */,
 				42709BE225955DC6000B876A /* LaunchScreen.storyboard in Resources */,
 				42709BDF25955DC6000B876A /* Assets.xcassets in Resources */,
 			);

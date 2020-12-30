@@ -14,13 +14,18 @@ import UIKit
  * When set as the navigation controller's delegate, this class will add its floating view to the
  * hierarchy and offer hooks for customization when a view controller is shown.
  *
- * Customization is offered via the `FloatingViewCustomizing` protocol. The view
- * controller and/or the navigation controller can conform to the protocol. If both, the view
- * controller takes precedence.
+ * Customization is offered via the `FloatingViewCustomizing` protocol.
+ * For each hook offered through the protocol, customization can be done with the following order of
+ * precendence:
+ *  - view controller being shown can conform to `FloatingViewCustomizing` and implement methods
+ *  - navigation controller can conform to `FloatingViewCustomizing` and implement methods
+ *  - `default handler` property corresponding to the desired customization can be set on the manager
  */
 class FloatingViewManager: NSObject, UINavigationControllerDelegate {
 
     let floatingView: UIView
+    var defaultShouldShowHandler: ((UIViewController, UINavigationController) -> (Bool))?
+    var defaultCreateConstraintsHandler: ((UIViewController, UINavigationController) -> ())?
 
     init(floatingView: UIView) {
         self.floatingView = floatingView
@@ -57,7 +62,7 @@ class FloatingViewManager: NSObject, UINavigationControllerDelegate {
                                                        navigationController: navigationController) {
             return first.shouldShowButton()
         }
-        return true
+        return defaultShouldShowHandler?(viewController, navigationController) ?? false
     }
 
     private func createConstraints(forViewController viewController: UIViewController,
@@ -66,6 +71,8 @@ class FloatingViewManager: NSObject, UINavigationControllerDelegate {
                                                        navigationController: navigationController) {
             first.createConstraints(floatingView: floatingView,
                                     superview: navigationController.view)
+        } else {
+            defaultCreateConstraintsHandler?(viewController, navigationController)
         }
     }
 }
