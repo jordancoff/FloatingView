@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		42709BD625955DC3000B876A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42709BD525955DC3000B876A /* AppDelegate.swift */; };
-		42709BD825955DC3000B876A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42709BD725955DC3000B876A /* SceneDelegate.swift */; };
 		42709BDA25955DC3000B876A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42709BD925955DC3000B876A /* ViewController.swift */; };
-		42709BDD25955DC3000B876A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42709BDB25955DC3000B876A /* Main.storyboard */; };
 		42709BDF25955DC6000B876A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42709BDE25955DC6000B876A /* Assets.xcassets */; };
 		42709BE225955DC6000B876A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42709BE025955DC6000B876A /* LaunchScreen.storyboard */; };
+		42709BEC259665C2000B876A /* FloatingViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42709BEB259665C2000B876A /* FloatingViewManager.swift */; };
+		42901559259CEBCD00AEAE15 /* FloatingViewCustomizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42901558259CEBCD00AEAE15 /* FloatingViewCustomizing.swift */; };
+		4290155B259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290155A259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42709BD225955DC2000B876A /* FloatingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42709BD525955DC3000B876A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42709BD725955DC3000B876A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		42709BD925955DC3000B876A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		42709BDC25955DC3000B876A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42709BDE25955DC6000B876A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42709BE125955DC6000B876A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42709BE325955DC6000B876A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42709BEB259665C2000B876A /* FloatingViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewManager.swift; sourceTree = "<group>"; };
+		42901558259CEBCD00AEAE15 /* FloatingViewCustomizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewCustomizing.swift; sourceTree = "<group>"; };
+		4290155A259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+FloatingViewManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		42709BD425955DC2000B876A /* FloatingView */ = {
 			isa = PBXGroup;
 			children = (
+				4290155D259D07AC00AEAE15 /* Example */,
+				42709BEB259665C2000B876A /* FloatingViewManager.swift */,
+				42901558259CEBCD00AEAE15 /* FloatingViewCustomizing.swift */,
+				4290155A259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift */,
+			);
+			path = FloatingView;
+			sourceTree = "<group>";
+		};
+		4290155D259D07AC00AEAE15 /* Example */ = {
+			isa = PBXGroup;
+			children = (
 				42709BD525955DC3000B876A /* AppDelegate.swift */,
-				42709BD725955DC3000B876A /* SceneDelegate.swift */,
 				42709BD925955DC3000B876A /* ViewController.swift */,
-				42709BDB25955DC3000B876A /* Main.storyboard */,
 				42709BDE25955DC6000B876A /* Assets.xcassets */,
 				42709BE025955DC6000B876A /* LaunchScreen.storyboard */,
 				42709BE325955DC6000B876A /* Info.plist */,
 			);
-			path = FloatingView;
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +138,6 @@
 			files = (
 				42709BE225955DC6000B876A /* LaunchScreen.storyboard in Resources */,
 				42709BDF25955DC6000B876A /* Assets.xcassets in Resources */,
-				42709BDD25955DC3000B876A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +148,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42709BEC259665C2000B876A /* FloatingViewManager.swift in Sources */,
 				42709BDA25955DC3000B876A /* ViewController.swift in Sources */,
 				42709BD625955DC3000B876A /* AppDelegate.swift in Sources */,
-				42709BD825955DC3000B876A /* SceneDelegate.swift in Sources */,
+				42901559259CEBCD00AEAE15 /* FloatingViewCustomizing.swift in Sources */,
+				4290155B259CEC8A00AEAE15 /* UINavigationController+FloatingViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		42709BDB25955DC3000B876A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42709BDC25955DC3000B876A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		42709BE025955DC6000B876A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z9V8285AH;
-				INFOPLIST_FILE = FloatingView/Info.plist;
+				INFOPLIST_FILE = FloatingView/Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z9V8285AH;
-				INFOPLIST_FILE = FloatingView/Info.plist;
+				INFOPLIST_FILE = FloatingView/Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
